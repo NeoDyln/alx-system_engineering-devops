@@ -1,0 +1,2 @@
+#!/bon/bash
+chmod -R a+X ./
