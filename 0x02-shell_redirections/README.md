@@ -7,7 +7,8 @@ This file contains a simple command to output the words hello world to the stout
 ### File 1 - Confused Smiley ###
 - This script outpus a smiley face as its output\n
 
-### File 2 Display /etc/passwd ###
+### File 2 (2-hellofile)  Display /etc/passwd ###
 - This is a script to display the contents of /etc/passwd file using the cat function
 
-### File 3 ###
+### File 3 (3-twofiles) ###
+- This file is similar to file 2 but takes two or more files and outputs their contents using Cat
