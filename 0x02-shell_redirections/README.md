@@ -19,3 +19,6 @@
 
 ### File 5 (5-firstlines) ###
 - This command uses the head function to output the first 10 lines of the /etc/passwd file
+
+### File 6 (6-thirdline) ###
+- This command uses both head and tail functions to display a specific line number of text using head -z file | tail +z where z is the line we want to display
