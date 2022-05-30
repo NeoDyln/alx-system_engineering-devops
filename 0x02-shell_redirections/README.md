@@ -22,3 +22,7 @@
 
 ### File 6 (6-thirdline) ###
 - This command uses both head and tail functions to display a specific line number of text using head -z file | tail +z where z is the line we want to display
+
+### File 7 (Create a file with some text in it) ###
+- This command uses the output redirect to add text to a file
+
