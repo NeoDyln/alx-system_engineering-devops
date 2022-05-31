@@ -40,3 +40,9 @@
 
 ### File 12 (12-newest_files) ###
 - This command displays the first 10 newest files in the current directory
+
+### File 13 (13-unique) ###
+- This file finds unique words in the inpus given and prints them out
+
+### File 14 (14-findthatword)  ###
+- This file displas lines having a root pattern in /etc/passwd
