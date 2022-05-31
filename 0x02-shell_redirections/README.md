@@ -46,3 +46,13 @@
 
 ### File 14 (14-findthatword)  ###
 - This file displas lines having a root pattern in /etc/passwd
+
+### File 15 (15-countthatword) ###
+- This file first lists all root pattern lines using grep -e the wc -l counts the number of lines with such an output
+
+### File 16 (16-whatsnext) ###
+- This file finds all lines with the pattern root and then displays 3 lines succeeding each line
+
+### File 17 (17-hidethisword) ###
+- This file displays everything in /etc/passwd that lacks the bin pattern
+
