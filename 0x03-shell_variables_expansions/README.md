@@ -16,3 +16,7 @@ This directory will list all existing commands as present here and what each doe
 ###4: 4-global_variables ###
 - Here I used printenv to display environment variables
 - Syntax: printenv
+
+### 5 : 5-local_variables ###
+- Here I used set to print all local variables as well as functions
+- Syntax: set
