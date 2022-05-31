@@ -47,3 +47,7 @@ This directory will list all existing commands as present here and what each doe
 ### 11: 11-binary_to_decimal ###
 - Here I used the binary to decimal convertor in linux as below
 - Syntax: echo $((2#binary_value))
+
+### 12: 12-expansions ###
+- Here I used the brace expansion such that I was able to recursively output 2 random alpha lowecase characters. I excluded oo by using the tr delete function
+- Syntax : echo {a..z}{a..z} | tr -d 'oo'
