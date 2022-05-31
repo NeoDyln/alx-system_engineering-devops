@@ -50,4 +50,4 @@ This directory will list all existing commands as present here and what each doe
 
 ### 12: 12-expansions ###
 - Here I used the brace expansion such that I was able to recursively output 2 random alpha lowecase characters. I excluded oo by using the tr delete function
-- Syntax : echo {a..z}{a..z} | tr -d 'oo'
+- Syntax : echo {a..z}{a..z} | tr -d 'oo' | tr ' ' '\n'
