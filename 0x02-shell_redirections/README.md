@@ -26,3 +26,11 @@
 ### File 7 (Create a file with some text in it) ###
 - This command uses the output redirect to add text to a file
 
+### File 8  (8-cwd_state) ###
+- This command simply writes to a file called ls_cwd_state the contents of ls -la
+
+### File 9 (9-duplicate_last_line) ###
+- This command takes the last line of a specified file and duplicates it then sends it back into the file without overwriting everything else
+
+### File 10 (10-no_more_js) ###
+- This command removes all .js files in current and sub directories while making sure not to touch directories themselves
