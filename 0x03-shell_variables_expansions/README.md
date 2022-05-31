@@ -49,5 +49,5 @@ This directory will list all existing commands as present here and what each doe
 - Syntax: echo $((2#binary_value))
 
 ### 12: 12-expansions ###
-- Here I used the brace expansion such that I was able to recursively output 2 random alpha lowecase characters. I excluded oo by using the tr delete function
-- Syntax : echo {a..z}{a..z} | tr -d 'oo' | tr ' ' '\n'
+- Here I used the brace expansion such that I was able to recursively output 2 random alpha lowecase characters. I excluded oo by using the grep -v function and filally, replaced spaces using tr function
+- Syntax : echo {a..z}{a..z} | tr ' ' '\n' | grep -v oo
