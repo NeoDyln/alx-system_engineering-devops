@@ -1,2 +1,2 @@
 #!/bin/bash
-curUser="whoami" | echo "hello " $curUser
+curUser=$(whoami) | echo "hello $curUser"
