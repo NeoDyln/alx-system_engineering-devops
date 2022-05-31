@@ -13,10 +13,17 @@ This directory will list all existing commands as present here and what each doe
 - Here we needed to change the env PATH such that it finishes by looking through /action. I did this via the export command since $PATH cannot be edited normally
 - Syntax is : export VARNAME_WITHOUT_DOLLAR=$PATH(Existing_Path):DIrectory_being_appended_at_end
 
-###4: 4-global_variables ###
+### 3 Pending ###
+
+
+### 4: 4-global_variables ###
 - Here I used printenv to display environment variables
 - Syntax: printenv
 
 ### 5 : 5-local_variables ###
 - Here I used set to print all local variables as well as functions
 - Syntax: set
+
+### 6 : 6-create_local_variable ###
+- Here I just created a variable as below
+- Sytax: var_name=value
