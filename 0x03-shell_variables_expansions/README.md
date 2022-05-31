@@ -67,11 +67,12 @@ This directory will list all existing commands as present here and what each doe
 
 ### 15: 101-rot13 ###
 - This is a kind of ceaser cipher encoding therefore you have to read on this abit to know why we use the tr as we used it below
+- Will try and give a better explanation later
 - Syntax : tr 'A-Za-z' 'N-ZA-Mn-za-m'
 
 ### 16: 102-odd ###
 - DIdn't really understand this very well but got assisted. Will try and explain later on
-- Syntax: paste -- | cut -f 1
+- Syntax: paste -d, - - | cut -d, -f1
 
 ### 17: 103-water_and_stir ###
 - Didn't really understand it well but will update an explanation later on
