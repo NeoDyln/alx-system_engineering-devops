@@ -34,3 +34,9 @@
 
 ### File 10 (10-no_more_js) ###
 - This command removes all .js files in current and sub directories while making sure not to touch directories themselves
+
+### File 11 (11-Directories) ###
+- This command counts the number of current and sub-directories within the current directory
+
+### File 12 (12-newest_files) ###
+- This command displays the first 10 newest files in the current directory
