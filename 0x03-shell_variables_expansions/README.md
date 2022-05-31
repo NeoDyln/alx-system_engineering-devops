@@ -31,3 +31,11 @@ This directory will list all existing commands as present here and what each doe
 ### 7 7-create_global_variable ###
 - Here I used the export function to create a global variable like below
 - Syntax : export Var_name=Value
+
+### 8: 8-true_knowledge ###
+- Here I added a variable to an number and echo out the result as below
+- Syntax: echo $(($TRUEKNOWLEDGE + 128))
+
+### 9: 9-divide_and_rule ###
+- Here I used the $((expression)) command to display the result as below
+- Syntax echo $(($POWER / $DIVIDE))
