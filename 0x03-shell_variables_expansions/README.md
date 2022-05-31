@@ -27,3 +27,7 @@ This directory will list all existing commands as present here and what each doe
 ### 6 : 6-create_local_variable ###
 - Here I just created a variable as below
 - Sytax: var_name=value
+
+### 7 7-create_global_variable ###
+- Here I used the export function to create a global variable like below
+- Syntax : export Var_name=Value
