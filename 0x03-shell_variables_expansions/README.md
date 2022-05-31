@@ -1,6 +1,8 @@
 # About #
 This directory will list all existing commands as present here and what each does
 
+## Mandatory tasks start ##
+
 ### 0: 0-alias ###
 - Here I created a shortcut function using the alias command to the remove all (rm *) and named it [ls].
 - Syntax is alias name_desired="Command_wanted"
@@ -13,7 +15,7 @@ This directory will list all existing commands as present here and what each doe
 - Here we needed to change the env PATH such that it finishes by looking through /action. I did this via the export command since $PATH cannot be edited normally
 - Syntax is : export VARNAME_WITHOUT_DOLLAR=$PATH(Existing_Path):DIrectory_being_appended_at_end
 
-### 3 Pending ###
+### 3: 3-paths ###
 - Here I first listed the values of $PATH then replaced : with \n to add line breaks then counted the number of resulting lines of directories
 - Syntax : echo $PATH | tr ':' '\n' | wc -l
 
@@ -52,3 +54,13 @@ This directory will list all existing commands as present here and what each doe
 ### 12: 12-expansions ###
 - Here I used the brace expansion such that I was able to recursively output 2 random alpha lowecase characters. I excluded oo by using the grep -v function and filally, replaced spaces using tr function
 - Syntax : echo {a..z}{a..z} | tr ' ' '\n' | grep -v oo
+
+### 13: 13-print_float ###
+- Here I used the printf function as well as the decimal to float converter to change into a float value
+- Syntax: printf '%.2f\n' $variable_to_be_converted
+
+## Advanced Tasks ##
+
+### 14: 100-decimal_to_hexadecimal ###
+- Here we use the printf function again together with the hexadecimal converter as below
+- Syntax : printf '%x\n'$variable_to_convert
