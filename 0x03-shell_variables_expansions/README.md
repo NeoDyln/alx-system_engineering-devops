@@ -39,3 +39,7 @@ This directory will list all existing commands as present here and what each doe
 ### 9: 9-divide_and_rule ###
 - Here I used the $((expression)) command to display the result as below
 - Syntax echo $(($POWER / $DIVIDE))
+
+### 10 10-love_exponent_breath ###
+- Here I used the $(($x**$y)) to symboize exponention as below
+- Syntax: echo $(($BREATH**$LOVE))
