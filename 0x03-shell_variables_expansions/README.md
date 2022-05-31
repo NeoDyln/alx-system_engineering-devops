@@ -64,3 +64,15 @@ This directory will list all existing commands as present here and what each doe
 ### 14: 100-decimal_to_hexadecimal ###
 - Here we use the printf function again together with the hexadecimal converter as below
 - Syntax : printf '%x\n'$variable_to_convert
+
+### 15: 101-rot13 ###
+- This is a kind of ceaser cipher encoding therefore you have to read on this abit to know why we use the tr as we used it below
+- Syntax : tr 'A-Za-z' 'N-ZA-Mn-za-m'
+
+### 16: 102-odd ###
+- DIdn't really understand this very well but got assisted. Will try and explain later on
+- Syntax: paste -- | cut -f 1
+
+### 17: 103-water_and_stir ###
+- Didn't really understand it well but will update an explanation later on
+- Syntax: printf "%o\n" $(( $((5#$(echo $WATER | tr water 01234))) + $((5#$(echo $STIR | tr stir. 01234))) )) | tr 01234567 bestchol
