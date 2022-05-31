@@ -14,8 +14,7 @@ This directory will list all existing commands as present here and what each doe
 - Syntax is : export VARNAME_WITHOUT_DOLLAR=$PATH(Existing_Path):DIrectory_being_appended_at_end
 
 ### 3 Pending ###
-- Here I first listed the values of $PATH then replaced : with \n to add line breaks then counted the number of resulting lines of directories
-- Syntax : echo $PATH | tr ':' '\n' | wc -l
+- Here I first listed the value of $PATH then replaced the colon markers  (:) with break lines (\n) then counted the number of lines
 
 ### 4: 4-global_variables ###
 - Here I used printenv to display environment variables
