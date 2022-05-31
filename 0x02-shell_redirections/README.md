@@ -54,5 +54,10 @@
 - This file finds all lines with the pattern root and then displays 3 lines succeeding each line
 
 ### File 17 (17-hidethisword) ###
-- This file displays everything in /etc/passwd that lacks the bin pattern
+- This file displays everything in /etc/passwd that lacks the bin pattern.
+- This is done by using grep -v which excludes bin results therefore grep -v bin file_path
+
+### File 18 (18-letteronly) ###
+- This file displays only lines that start with letters
+
 
