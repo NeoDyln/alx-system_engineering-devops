@@ -43,3 +43,7 @@ This directory will list all existing commands as present here and what each doe
 ### 10 10-love_exponent_breath ###
 - Here I used the $(($x**$y)) to symboize exponention as below
 - Syntax: echo $(($BREATH**$LOVE))
+
+### 11: 11-binary_to_decimal ###
+- Here I used the binary to decimal convertor in linux as below
+- Syntax: echo $((2#binary_value))
