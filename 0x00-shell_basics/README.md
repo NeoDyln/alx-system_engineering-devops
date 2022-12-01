@@ -111,3 +111,17 @@ mv /tmp/betty /tmp/my_first_directory
 ```
 rm /tmp/my_first_directory/betty
 ```
+
+### 9-firstdirdeletion
+- Task: Delete the directory my_first_directory that is in the /tmp directory.
+- Here I opted to use the rmdir command. CHeck its man page to understand it
+```
+rmdir /tmp/my_first_directory
+```
+
+### 10-back
+- Task: Write a script that changes the working directory to the previous one.
+- Here, the command used was cd but as to why I used it like so, check on the man page. I actually didn't know this until when I checked
+```
+cd -
+```
