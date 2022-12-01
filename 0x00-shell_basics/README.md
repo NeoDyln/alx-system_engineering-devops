@@ -38,6 +38,7 @@ chmod u+x filename
 ```
 man ls
 ```
+- As an alternative to running this command on a terminal, you can also run the same command on your browser and it should lead to a page with the same information
 
 ## Tasks
 ### 0-current_working_directory 
@@ -63,4 +64,28 @@ ls
 - YOu would run this command from the directory in which you want to use as your home directory
 ```
 cd
+```
+### 3-listfiles
+- Task: Display current directory contents in a long format
+- From the task description, this will use the command in task 1-listit but it won't be the same
+- Notice they want it in long format. To do this, check out the man page of the command and you'll realize why the answer is this
+```
+ls -l
+```
+
+### 4-listmorefiles 
+- Task: Display current directory contents, including hidden files (starting with .). Use the long format
+- Like the task above, this also uses the ls command but check the man page of ls to understand why the command is like so
+```
+ls -la
+```
+
+### 5-listfilesdigitonly
+- Task: Display current directory contents with:
+	- Long format
+	- with user and group IDs displayed numerically
+	- And hidden files (starting with .)
+- This again uses the ls command but make use of the man page to understand whu I chose this as my answer
+```
+ls -lna
 ```
