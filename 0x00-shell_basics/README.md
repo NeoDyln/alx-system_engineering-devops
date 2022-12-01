@@ -89,3 +89,25 @@ ls -la
 ```
 ls -lna
 ```
+
+### 6-firstdirectory
+- Task: Create a script that creates a directory named my_first_directory in the /tmp/ directory.
+- Here, the command I chose was the mkdir command. Check out the man page of that commad to understand why I chose this
+```
+mkdir /tmp/my_first_directory
+```
+
+### 7-movethatfile
+- Task: Move the file betty from /tmp/ to /tmp/my_first_directory.
+- Here the command I chose was the mv command. Use the man page to understand its use cases
+```
+mv /tmp/betty /tmp/my_first_directory
+```
+
+### 8-firstdelete
+- Task: Delete the file betty.
+	- The file betty is in /tmp/my_first_directory
+- Here I chose to use the rm command. Check the man page for that to understand its use case
+```
+rm /tmp/my_first_directory/betty
+```
