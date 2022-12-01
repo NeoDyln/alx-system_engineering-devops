@@ -130,5 +130,5 @@ cd -
 - Task: Write a script that lists all files (even ones with names beginning with a period character, which are normally hidden) in the current directory and the parent of the working directory and the /boot directory (in this order), in long format.
 - This uses concepts from the cd command as well as the ls command so make sure to understand both commands
 ```
-ls -la ./ ../ /boot
+ls -Ula ./ ../ /boot
 ```
