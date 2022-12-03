@@ -177,8 +177,9 @@ mv [[:upper:]]*. /tmp/u
 ### 101-clean_emacs
 - Task: Create a script that deletes all files in the current working directory that end with the character ~.
 - Here again, we are being tested on wildcard use in shell and how we can use it with the delete command in shell
+- Notice that its asking us to delete specifically anything ends with ~. A file could end with .c~
 ```
-rm *.~
+rm *[~]
 ```
 
 ### 102-tree
@@ -186,10 +187,11 @@ rm *.~
 	- Create a script that creates the directories welcome/, welcome/to/ and welcome/to/school in the current directory.
 	- You are only allowed to use two spaces (and lines) in your script, not more.
 - This task has a slight simple trick to it. They want us to create 3 directories but with only 2 spaces
-- Notice that the 3 directories are all within each other so if I created a folder called AS and I put in a folder called ZX, it would be the same as me creating a directory with the path AS/ZX hence my answer
-- The command to create a directory is mkdir
+- I had assumed that if I create a folder called AS and I put in a folder called ZX, it would be the same as me creating a directory with the path AS/ZX hence my answer would have been mkdir AS/ZX but this isn't the case
+- The program is actually testing us on knowledge of the possibilities/ options that mkdir can do
+- The command to create a directory is mkdir and to check its possibilities/ options, read the man page
 ```
-mkdir welcome/to/ welcome/to/school
+mkdir -p welcome/to/school
 ```
 
 ### 103-commas
@@ -204,6 +206,6 @@ mkdir welcome/to/ welcome/to/school
 
 - This seems like an advanced use case of the ls command. Notice how I've gone about adding the various options that I think wil achieve this
 ```
-ls -mpaX --group-directories-first
+ls -mpa --group-directories-first
 ```
 
