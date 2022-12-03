@@ -148,6 +148,9 @@ file /tmp/iamafile
 - Here there's a command called ln that does this for us. Man it to understand its use cases as well as why I opted for this answer
 ``` shell
 ln -T /bin/ls __ls__
+
+# An alternative answer I found was
+cp -s --symbolic-link /bin/ls __ls__
 ``` 
 
 ### 14-copy_html

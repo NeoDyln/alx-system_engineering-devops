@@ -1,2 +1,2 @@
 #!/bin/bash
-ln -T /bin/ls __ls__
+cp -s --symbolic-link /bin/ls __ls__
