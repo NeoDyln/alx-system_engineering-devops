@@ -135,3 +135,33 @@ ls -la ./ ../ /boot
 # But instead, I'll write it as
 ls -la . .. /boot
 ```
+
+### 12-file_type
+- Task: Write a script that prints the type of the file named iamafile. The file iamafile will be in the /tmp directory when we will run your script.
+- There's a command in shell to print the file type of a command called file. Man it to understand
+```shell
+file /tmp/iamafile
+```
+
+### 13-symbolic_link
+- Task: Create a symbolic link to /bin/ls, named __ls__. The symbolic link should be created in the current working directory
+- Here there's a command called ln that does this for us. Man it to understand its use cases as well as why I opted for this answer
+``` shell
+ln -T /bin/ls __ls__
+``` 
+
+### 14-copy_html
+- Task: 
+	- Create a script that copies all the HTML files from the current working directory to the parent of the working directory, but only copy files that did not exist in the parent of the working directory or were newer than the versions in the parent of the working directory.
+	- You can consider that all HTML files have the extension .html
+- Here, we seem to be making use of the cp (copy) command but in an advanced way so let's man it first to know how we'll use it
+- This was the answer I found from the man pages
+``` shell
+cp -u --update ./*.html ../
+```
+
+### 100-lets_move
+- Task:
+	- Create a script that moves all files beginning with an uppercase letter to the directory /tmp/u
+	- You can assume that the directory /tmp/u will exist when we will run your script
+- Here we seem to be making use of the mv command but also in an advancd manner so let's man it to see if we can find out how to use it in this case
