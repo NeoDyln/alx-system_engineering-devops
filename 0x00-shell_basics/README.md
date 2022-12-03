@@ -145,11 +145,11 @@ file /tmp/iamafile
 
 ### 13-symbolic_link
 - Task: Create a symbolic link to /bin/ls, named __ls__. The symbolic link should be created in the current working directory
-- Here there's a command called ln that does this for us. Man it to understand its use cases as well as why I opted for this answer
+- Here there's a command called ln that can do this for us. Man it to understand its use cases as well as why I opted for this answer
 ``` shell
 ln -T /bin/ls __ls__
 
-# An alternative answer I found was
+# The ln command created the link but as a program. Instead, I opted to use this alternative answer I found with the cp command
 cp -s --symbolic-link /bin/ls __ls__
 ``` 
 
@@ -168,3 +168,9 @@ cp -u --update ./*.html ../
 	- Create a script that moves all files beginning with an uppercase letter to the directory /tmp/u
 	- You can assume that the directory /tmp/u will exist when we will run your script
 - Here we seem to be making use of the mv command but also in an advancd manner so let's man it to see if we can find out how to use it in this case
+- Well we are making use of the mv command but it will not help us select the files we want. Here we have to know the wildcards used in shell. Check out this link (http://www.learningaboutelectronics.com/Articles/Wildcards-in-linux.php) to understand why I close this.
+
+```
+mv [[:upper:]] /tmp/u 
+```
+
