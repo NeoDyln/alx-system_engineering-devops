@@ -171,7 +171,7 @@ cp -u --update ./*.html ../
 - Well we are making use of the mv command but it will not help us select the files we want. Here we have to know the wildcards used in shell. Check out this link (http://www.learningaboutelectronics.com/Articles/Wildcards-in-linux.php) to understand why I close this.
 
 ```
-mv [[:upper:]]*. /tmp/u 
+mv ./[[:upper:]]* /tmp/u 
 ```
 
 ### 101-clean_emacs
@@ -198,7 +198,7 @@ mkdir -p welcome/to/school
 - Task: Write a command that lists all the files and directories of the current directory ->ls  , separated by commas (,) -> m
 	- Directory names should end with a slash (/) -> p
 	- Files and directories starting with a dot (.) should be listed -> a
-	- The listing should be alpha ordered, -> X 
+	- The listing should be alpha ordered, -> v 
 		- except for the directories . and .. which should be listed at the very beginning -> --group-directories-first
 	- Only digits and letters are used to sort; Digits should come first
 	- You can assume that all the files we will test with will have at least one letter or one digit
@@ -206,6 +206,6 @@ mkdir -p welcome/to/school
 
 - This seems like an advanced use case of the ls command. Notice how I've gone about adding the various options that I think wil achieve this
 ```
-ls -mpa --group-directories-first
+ls -mpav --group-directories-first
 ```
 
