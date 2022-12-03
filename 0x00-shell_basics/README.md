@@ -171,6 +171,39 @@ cp -u --update ./*.html ../
 - Well we are making use of the mv command but it will not help us select the files we want. Here we have to know the wildcards used in shell. Check out this link (http://www.learningaboutelectronics.com/Articles/Wildcards-in-linux.php) to understand why I close this.
 
 ```
-mv [[:upper:]] /tmp/u 
+mv [[:upper:]]*. /tmp/u 
+```
+
+### 101-clean_emacs
+- Task: Create a script that deletes all files in the current working directory that end with the character ~.
+- Here again, we are being tested on wildcard use in shell and how we can use it with the delete command in shell
+```
+rm *.~
+```
+
+### 102-tree
+- Task: 
+	- Create a script that creates the directories welcome/, welcome/to/ and welcome/to/school in the current directory.
+	- You are only allowed to use two spaces (and lines) in your script, not more.
+- This task has a slight simple trick to it. They want us to create 3 directories but with only 2 spaces
+- Notice that the 3 directories are all within each other so if I created a folder called AS and I put in a folder called ZX, it would be the same as me creating a directory with the path AS/ZX hence my answer
+- The command to create a directory is mkdir
+```
+mkdir welcome/to/ welcome/to/school
+```
+
+### 103-commas
+- Task: Write a command that lists all the files and directories of the current directory ->ls  , separated by commas (,) -> m
+	- Directory names should end with a slash (/) -> p
+	- Files and directories starting with a dot (.) should be listed -> a
+	- The listing should be alpha ordered, -> X 
+		- except for the directories . and .. which should be listed at the very beginning -> --group-directories-first
+	- Only digits and letters are used to sort; Digits should come first
+	- You can assume that all the files we will test with will have at least one letter or one digit
+	- The listing should end with a new line
+
+- This seems like an advanced use case of the ls command. Notice how I've gone about adding the various options that I think wil achieve this
+```
+ls -mpaX --group-directories-first
 ```
 
