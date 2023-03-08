@@ -198,14 +198,40 @@ mkdir -p welcome/to/school
 - Task: Write a command that lists all the files and directories of the current directory ->ls  , separated by commas (,) -> m
 	- Directory names should end with a slash (/) -> p
 	- Files and directories starting with a dot (.) should be listed -> a
-	- The listing should be alpha ordered, -> v 
-		- except for the directories . and .. which should be listed at the very beginning -> --group-directories-first
+	- The listing should be alpha ordered, ->  
+		- except for the directories . and .. which should be listed at the very beginning -> 
 	- Only digits and letters are used to sort; Digits should come first
 	- You can assume that all the files we will test with will have at least one letter or one digit
 	- The listing should end with a new line
 
 - This seems like an advanced use case of the ls command. Notice how I've gone about adding the various options that I think wil achieve this
+```shell
+ls -mpa
 ```
-ls -mpav --group-directories-first
-```
+- But at this point we have just cleared the first 3 requirements. We still haven't sorted the ordering as per the needed requirements
+- I had thought the to-do option was to find more options for the ls command to pass in but then I thought I could maybe pass the result of what i got so far into another shell function (sort)
+- This did need me to research abit qand read some man pages but eventually i settled on:
+	```
+	ls -mpa | sort -d
+	# What this does is it basically takes the result of ls -mpa and passes/pipes it (|) over to sort -d passed_result and then re-executes the function
+	```
 
+### school.mgc
+- Task: Create a magic file school.mgc that can be used with the command file to detect School data files. School data files always contain the string SCHOOL at offset 0.
+
+- So I'll be honest this one took me a long time to figure out and honestly I'm no sure I have the right answe to how it works but the idea is to create a magic file that follows the format of magic files
+	- This can be checked using
+		```shell
+		man magic
+		```
+	- Basically we should follow this format
+	```
+	offset_value data_type_being_searched item_being_searched_for result_on_find
+	!:mime mime_type/file_type
+	```
+- But just doing this won't give the answer, you need to actually make your magic file into a magic file using
+	```shell
+	file -C -m file_to_be_made_magic
+	```
+
+- What this does at the end of the day is find all files that begin with the words in <item_being_searched_for> then if found, return a result of <result_on_find> as its description.
