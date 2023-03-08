@@ -1,2 +1,2 @@
 #!/bin/bash
-ls -mpav --group-directories-first
+ls -mpaX --group-directories-first
