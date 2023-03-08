@@ -147,9 +147,9 @@ file /tmp/iamafile
 - Task: Create a symbolic link to /bin/ls, named __ls__. The symbolic link should be created in the current working directory
 - Here there's a command called ln that can do this for us. Man it to understand its use cases as well as why I opted for this answer
 ``` shell
-ln -T /bin/ls __ls__
+ln -s /bin/ls __ls__
 
-# The ln command created the link but as a program. Instead, I opted to use this alternative answer I found with the cp command
+# An alternative answer I found with the cp command
 cp -s --symbolic-link /bin/ls __ls__
 ``` 
 
