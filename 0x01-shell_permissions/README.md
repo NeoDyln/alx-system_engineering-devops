@@ -62,3 +62,37 @@ chown user file
 	- The file hello will be in the working directory
 	- Originally the file had permissions of rwx r-- r--
 - Here I opted to use the `chmod 744 file` command so as to add executable permissions to the owner while maintaining permissions for the others
+
+
+## Task 7: 6-multiple_permissions
+- Description: Write a script that adds execute permission to the owner and the group owner, and read permission to other users, to the file hello.
+	- The file hello will be in the working directory
+	- Assume the current permissions of hello file were set to r-- r-- ---
+- I opted to chmod and add the respective permissions while maintaining the existing which resulted in a permission set of 554 hence `chmod 554 hello`
+
+## Task 8: 7-everybody
+- Description: Write a script that adds execution permission to the owner, the group owner and the other users, to the file hello
+	- hello originally has permissions set to rw- r-- ---
+	- The file hello will be in the working directory
+	- You are not allowed to use commas for this script
+- I again used `chmod` to add the execute permissions while maintaing the original rights
+
+## Task 9: 8-James_Bond (Funnily enough the answer is already here)
+- Description: 
+	- Write a script that sets the permission to the file hello as follows:
+		- Owner: no permission at all (--- therefore 000 therefore 0)
+		- Group: no permission at all (--- therefore  000 therefore  0)
+		- Other users: all the permissions (rwx therefore 111 therefore 7)
+	- The file hello will be in the working directory You are not allowed to use commas for this script
+
+- Here they've more or less told me all the permissions I need to set with the octal notation so that I can `chmod` them. I just need to be sure about which permission goes where and I confirm this from the image I attached above
+
+## Task 10: 9-John_Doe
+- Description: Write a script that sets the mode of the file hello to this:
+	```
+	-rwxr-x-wx 1 julien julien 23 Sep 20 14:25 hello
+	```
+- The file hello will be in the working directory
+- You are not allowed to use commas for this script
+
+- Here I just need to `chmod` hello to have the permissions set above
