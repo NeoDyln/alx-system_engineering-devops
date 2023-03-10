@@ -49,3 +49,15 @@ whoami | groups
 ## Task 4: 3-new_owner
 - Description: Write a script that changes the owner of the file hello to the user betty
 - Here it's making use of the `chown` command but rememberit can only be used with admin priviledges like `sudo`
+``` shell
+chown user file
+```
+
+## Task 5: 4-empty
+- Description: Write a script that creates an empty file called hello.
+- Here I believe the command to use is the `touch` command
+
+## Task 6: 5-execute
+- Description: Write a script that adds execute permission to the owner of the file hello.
+	- The file hello will be in the working directory
+- Here I opted to use the `chmod 700 file` command
