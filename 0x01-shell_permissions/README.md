@@ -128,3 +128,9 @@ chown user file
 
 - Simple answer here is I didn't know about this until I read the man. If it's not on the man page, check the help page using
 `command --help`
+
+### Task 12: 11-directories_permissions
+- Description:
+	- Create a script that adds execute permission to all subdirectories of the current directory for the owner, the group owner and all other users.
+	- Regular files should not be changed.
+- Here I first thought of finding a way to list just the sub-directories then from that result, pass in the `chmod` to add executable permissions hence I settled on a combo of `ls` and `chmod`
