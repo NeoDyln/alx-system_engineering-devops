@@ -34,3 +34,14 @@ chmod 777 some_file
 	su betty
 	# Run `man su` on your linux terminal/ google search it for better understanding
 	```
+## Task 2: 1-who_am_i
+- Description:Write a script that prints the effective username of the current user.
+	- I opted to use `whoami`
+
+## Task 3: 2-groups
+- Description: Write a script that prints all the groups the current user is part of.
+- Here we are asked to print the groups but not just any groups, all that the current user is a part of
+- I opted to first get the current user then pass that user into the groups per user function
+``` shell
+whoami | groups
+```
