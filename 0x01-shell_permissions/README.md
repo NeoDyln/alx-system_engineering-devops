@@ -118,3 +118,13 @@ chown user file
 - You are not allowed to use commas for this script
 
 - Here I just need to `chmod` hello to have the permissions set above
+
+## Task 11: 10-mirror_permissions
+- Description:
+- Write a script that sets the mode of the file hello the same as olleh’s mode.
+	- The file hello will be in the working directory
+	- The file olleh will be in the working directory
+	- Note: the mode/ permissions of olleh will not always be 664. Make sure your script works for any mode.
+
+- Simple answer here is I didn't know about this until I read the man. If it's not on the man page, check the help page using
+`command --help`
