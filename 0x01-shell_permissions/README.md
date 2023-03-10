@@ -60,4 +60,5 @@ chown user file
 ## Task 6: 5-execute
 - Description: Write a script that adds execute permission to the owner of the file hello.
 	- The file hello will be in the working directory
-- Here I opted to use the `chmod 700 file` command
+	- Originally the file had permissions of rwx r-- r--
+- Here I opted to use the `chmod 744 file` command so as to add executable permissions to the owner while maintaining permissions for the others
