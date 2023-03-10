@@ -23,6 +23,28 @@ chmod 777 some_file
 # This gives read write and execute permissions ( (rxw) = 7 per user) to all users of that file
 ```
 
+### Changing permissions using symbolic notations
+- Octal notations work great, but what happens in a case where you need to update permissions without knowing what the original permissions were. It may as well be impossible to do this with octal notation hence the need for symbolic notation and it works like so:
+- Users are divided into 4 groups:
+	- Owner/ User: Denoted by the letter u
+	- Groups: Denoted by the letter g
+	- Others/ everyone else : Denoted by the letter o
+	- Everyone/ All: denoted by the letter a
+- Permissions remain the same as we've been used to ie r,w,x (Remember the meaning of these change depending on if you're working with a file or directory)
+- To use symbolic notations, we make use of 3 major operands
+	- + : This updates by granting whatever permissions we pass on top of the existing
+	- - : This updates by removing whatever permissions we pass but leaves any un-touched permissions intact
+	- = : This updates by replacing everything with the permissions we pass. If there are any that we didn't pass, they are reset to no_permission (-)
+
+- Having known the three above, the notations now follow this format:
+``` 
+affected_user(s) + operand + permissions_being_set
+# Therefore if you had a file with permissions rw- --- --- and you wanted to give all users read and execution rights, you would use this
+a+rx
+# OR
+a+x, a+r
+```
+
 # Tasks
 ## Task 1: 0-iam_betty
 - Description: Create a script that switches the current user to the user betty.
@@ -68,7 +90,7 @@ chown user file
 - Description: Write a script that adds execute permission to the owner and the group owner, and read permission to other users, to the file hello.
 	- The file hello will be in the working directory
 	- Assume the current permissions of hello file were set to r-- r-- ---
-- I opted to chmod and add the respective permissions while maintaining the existing which resulted in a permission set of 554 hence `chmod 554 hello`
+- I opted to chmod and add the respective permissions while maintaining the existing which resulted in a permission set of 554 hence `chmod 554 hello` but this could fail should they decide not to use that set of permissions. As a result, I found out about symbolic notations (Check above) and was able to do this
 
 ## Task 8: 7-everybody
 - Description: Write a script that adds execution permission to the owner, the group owner and the other users, to the file hello
