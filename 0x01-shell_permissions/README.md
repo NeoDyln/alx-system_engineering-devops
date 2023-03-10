@@ -45,3 +45,7 @@ chmod 777 some_file
 ``` shell
 whoami | groups
 ```
+
+## Task 4: 3-new_owner
+- Description: Write a script that changes the owner of the file hello to the user betty
+- Here it's making use of the `chown` command but rememberit can only be used with admin priviledges like `sudo`
