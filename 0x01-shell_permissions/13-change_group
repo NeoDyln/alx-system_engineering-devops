@@ -1,2 +1,2 @@
-!#/bin/bash
+#!#!in/bash
 chown [:school] hello
