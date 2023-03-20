@@ -62,23 +62,74 @@ ls -lt | head
 - Description
 	- Write a script that displays a confused smiley "(Ôo)'
 - Here, I still made use of the echo command but with the addition of the backslash (\)) ...Had to put 2 closing brackets since the backslash escapes whatever follows it
-`echo "\"(Ôo)'"`
+	``` shell
+	echo "\"(Ôo)'"
+	```
 
 ### 2-hellofile
 - Description:
 	- Display the content of the /etc/passwd file
 - Here I made use of the `cat` command like so
-` cat /etc/passwd`
+	``` shell
+	cat /etc/passwd
+	```
 
 ### 3-twofiles
 - Description:
 	- Display the content of /etc/passwd and /etc/hosts
 - Here I again made use of the cat command but I passed in 2 files like so
-` cat /etc/passwd /etc/hosts`
+	```  shell
+	cat /etc/passwd /etc/hosts
+	```
 
 ### 4-lastlines
 - Description
 	- Display the last 10 lines of /etc/passwd
 - Here, I first displayed the file's contents then from that output, retrieved the last 10 lines by passing it to the tail function using a pipeline like so
 
-`cat /etc/passwd | tail -n 10`
+	``` shell
+	cat /etc/passwd | tail -n 10
+	```
+
+### 5-firstlines
+- Description
+	- Display the first 10 lines of /etc/passwd
+- Here I opted to use the cat command and from whatever it outputs, get the first 10 lines
+``` shell
+cat /etc/passwd | head -n 10
+```
+
+### 6-third_line
+- Description:
+	- Write a script that displays the third line of the file iacta
+	- The file iacta will be in the working directory
+	- You’re not allowed to use `sed`
+	- Note: The output will differ, depending on the content of the file iacta
+- Here I opted to follow the below steps
+	- Display the whole file
+	- Get the first 3 lines
+	- Get the last line from the 3 lines above
+	``` shell
+	cat iacta | head -n 3 | tail -n 1
+	```
+### 7-file
+- Description:
+	- Write a shell script that creates a file named exactly [ \*\\'"Best School"\'\\*$\?\*\*\*\*\*:) ] containing the text Best School ending by a new line
+- Here I followed the below steps
+	- create a file with the name given { \*\\'"Best School"\'\\*$\?\*\*\*\*\*:)  }
+	- I did have to escape each special character for each to work
+	- echo into that file the words "Best School"
+
+### 8-cwd_state
+- Description:
+	- Write a script that writes into the file ls_cwd_content the result of the command ls -la. 
+	- If the file ls_cwd_content already exists, it should be overwritten. 
+	- If the file ls_cwd_content does not exist, create it.
+
+- Here I opted for the below steps:
+	- Run the command ls -la
+	- Set its results to write into a file called ls_cwd_content
+
+``` shell
+ls -la > ls_cwd_content
+```
