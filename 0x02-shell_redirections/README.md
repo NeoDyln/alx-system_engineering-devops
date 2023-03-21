@@ -256,4 +256,36 @@ cat /etc/passwd | grep -v "bin"
 cat /etc/ssh/sshd_config | grep [:alpha:]*
 ```
 
+### 19-AZ
+- Description:
+	- Replace all characters A and c from input to Z and e respectively.
+- Here are the steps I followed
+	- First I collected the text to replace from standard Input using `cat`
+	- I then used `tr` to replace parts of that text with other parts
+
+``` shell
+cat - | tr A,c Z,e
+```
+
+### 20-hiago
+- Description:
+	- Create a script that removes all letters c and C from input.
+- Here are the steps I followed
+	- First I collected standard input from `cat`
+	- Then I deleted all the characters in set 1 from `tr`
+``` shell
+cat - | tr -d c,C
+```
+
+### 21-reverse
+- Description:
+	- Write a script that reverse its input.
+- Here are the streps I followed
+	- I collected the input from `cat`
+	- I then used `rev` to reverse the order of input
+
+``` shell
+cat - | rev
+```
+
 
