@@ -173,3 +173,29 @@ cat iacta | tail -n 1 >> iacta
 ls -aR | find -type d | grep / | wc -l
 ```
 
+### 12-newest_files
+- Description:
+	- Create a script that displays the 10 newest files in the current directory
+		- One file per line
+		- Sorted from the newest to the oldest
+- Here I opted to do the following:
+	- List the files in order of their modification and each having its own line with `ls -tx`
+	- pass the output to `head -n 10`
+
+``` shell
+ls -t | head -n 10
+```
+
+### 13-unique
+- Description:
+	- Create a script that takes a list of words as input and prints only words that appear exactly once.
+		- Input format: One line, one word
+		- Output format: One line, one word
+		- Words should be sorted
+- Here is the steps I followed:
+	- I collected the input and auto-sorted it first using `sort -`
+	- I then sent its results to `uniq` then obtained the only-occurring-once words
+
+``` shell
+sort -d - | uniq -u
+```
