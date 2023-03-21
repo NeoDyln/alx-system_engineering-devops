@@ -133,3 +133,43 @@ cat /etc/passwd | head -n 10
 ``` shell
 ls -la > ls_cwd_content
 ```
+
+### 9-duplicate_last_line
+- Description:
+	- Write a script that duplicates the last line of the file iacta
+- Here are the steps I followed:
+	- I first printed out all of iacta using `cat`
+	- I then pulled out the last line using `tail`
+	- I then passed that line back into iacta using >>
+
+``` shell
+cat iacta | tail -n 1 >> iacta
+```
+
+### 10-no_more_js
+- Description:
+	- Write a script that deletes all the regular files (not the directories) with a .js extension that are present in the current directory and all its subfolders.
+- Here are the steps I followed
+	- I made use of the `find` command to
+		- Find all files of type file
+		- That had an extension .js
+		- and delete those files
+
+	``` shell
+	find -type f -name "*.js" -delete
+	```
+### 11-directories
+- Description:
+	- Write a script that counts the number of directories and sub-directories in the current directory.
+		- The current and parent directories should not be taken into account
+		- Hidden directories should be counted
+- Here are the steps I followed
+	- I used `ls` to list all the directories and their contents incuding the hidden ones with `-a` and the subdirectories with `-R`
+	- I then used `find` to filter from this, directories alone
+	- I then used `grep` to find all that began after the current directory ie Those with a /
+	- I finally used `wc` to count the number of lines that resulted
+
+``` shell
+ls -aR | find -type d | grep / | wc -l
+```
+
