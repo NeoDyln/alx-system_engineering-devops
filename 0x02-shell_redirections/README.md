@@ -222,3 +222,38 @@ cat /etc/passwd | grep "root"
 ``` shell
 cat /etc/passwd | grep "bin" | wc -l
 ```
+
+### 16-whatsnext
+- Description:
+	- Display lines containing the pattern “root” and 3 lines after them in the file /etc/passwd.
+- Here is what I opted to do
+	- First I displayed the file's contents with `cat`
+	- Then I set the filter to find root and 3 lines after it then output the result
+``` shell
+cat /etc/passwd | grep "root" -A 3
+```
+
+
+### 17-hidethisword
+- Description:
+	- Display all the lines in the file /etc/passwd that do not contain the pattern “bin”.
+- Here are the steps I followed
+	- I first listed the file contents with `cat`
+	- I then used `grep` to return non-matching patterns
+
+``` shell
+cat /etc/passwd | grep -v "bin"
+```
+
+### 18-letteronly
+- Description
+	- Display all lines of the file /etc/ssh/sshd_config starting with a letter
+- Here are the steps I followed
+	- I first displayed the contents of the file with `cat`
+	- I then used `grep` to find all lines that begin with an alphabet
+
+``` shell
+cat /etc/ssh/sshd_config | grep [:alpha:]*
+```
+
+
