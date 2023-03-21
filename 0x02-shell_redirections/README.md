@@ -199,3 +199,26 @@ ls -t | head -n 10
 ``` shell
 sort -d - | uniq -u
 ```
+
+### 14-findthatword
+- Description:
+	- Display lines containing the pattern “root” from the file /etc/passwd
+- Here is what I did
+	- I first displayed the contents of /etc/passwd with `cat`
+	- I then used `grep` to find a matching pattern of "root"
+
+``` shell
+cat /etc/passwd | grep "root"
+```
+
+### 15-countthatword
+- Description:
+	- Display the number of lines that contain the pattern “bin” in the file /etc/passwd
+- Here is what I did
+	- I first listed the contents of /etc/passwd with `cat`
+	- I then filtered out the "bin" pattern with `grep`
+	- I then used `wc` to count the number of lines
+
+``` shell
+cat /etc/passwd | grep "bin" | wc -l
+```
