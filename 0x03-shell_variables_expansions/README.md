@@ -11,8 +11,9 @@ In shell, there are 2 kinds of variables:
 - Local variables
 
 ### Local variables 
-These are variables that only remain active within the current login session.
-Think of it like accessing an e-shop then placing things in the cart without a log in. If your internet disappears, so does your cart items so you'll have to re-select them in a new session
+- These are variables that only remain active within the current login session.
+- Think of it like accessing an e-shop then placing things in the cart without a log in. If your internet disappears, so does your cart items so you'll have to re-select them in a new session
+- Usually these can be accessed using `set` command though it pronts both environment variables and local variables
 
 #### Creating a local variable
 To create it, simply use the command
@@ -21,8 +22,10 @@ To create it, simply use the command
 	```
 
 ### Global/ Environment variables
-These are variables that will always be accessible to all users of the system as they are global
-Think of it like the `pwd` command that if used by anyone, will always produce the expected result regardless of where the user currently is in the system directories. In this sense, it's a global command because anyone can access it and it will produce the expected result
+- These are variables that will always be accessible to all users of the system as they are global
+- Think of it like the `pwd` command that if used by anyone, will always produce the expected result regardless of where the user currently is in the system directories. In this sense, it's a global command because anyone can access it and it will produce the expected result
+- Existing global variables can be listed with the `printenv` command
+
 #### Creating global variables
 We follow the format of creating local variables but simply add export before the command like so
 	``` shell
@@ -73,7 +76,7 @@ Here are the steps I followed:
 - The current user can be obtained with the `user` command then appended to a "hello " string in an `echo` command using expansions like so
 
 ``` shell
-echo "hello $(users)"
+echo "hello $USER"
 ```
 
 ### 2-path
@@ -85,5 +88,23 @@ Here are the steps I followed:
 - Like normal variable addiditons, I'll simply do something like `a = a + 1`
 - In the context of shell variables though, I'll simply reset the PATH variable to have the new path plus the original path like so
 ``` shell
-export PATH='$PATH:/action'
+export PATH=$PATH:/action
 ```
+
+### 3-paths
+- Description: Create a script that counts the number of directories in the PATH.
+
+- Here are the steps I followed:
+	- I first displayed PATH using `echo` and from the resulting output, 
+	- Used `grep -c` to count the occurrences of `:/`
+	- I then passed that entire function into an expression and added 1 to its value to account for the first directory
+
+``` shell
+echo $(($(echo $PATH | grep -o :/ | wc -l) + 1 ))
+```
+
+### 4-global_variables
+- Description: Create a script that lists environment variables.
+
+- Here are the steps I followed
+	- Environment variables/ global variables can be listed using the `printenv` command
